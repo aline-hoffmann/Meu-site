@@ -1,0 +1,334 @@
+
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    padding-bottom: 20px;
+}
+
+body{
+    background-color: black;
+    height: 80vh;
+}
+
+.interface{
+   max-width: 1280px;
+   margin: 0 auto;
+   padding-bottom: 0px;
+}
+
+.flex{
+    display: flex;
+}
+
+.aline-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #F76984;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #F76984;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #F76984;
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #F76984;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 50px;
+}
+
+.botao-redes button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:0;
+    background-color: #F76984;
+    font-size:30px;
+    cursor: pointer;
+    margin: 0 15px ;
+    transition: .2s ;
+    padding-top: 12px;
+}
+
+/*ESTILO DO TOPO DO SITE */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.txt-topo-site h1{
+   color: #fff; 
+   font-size: 42px;
+   line-height: 40px;
+}
+
+.txt-topo-site h1 span{
+    color: #F76984;
+    font-size: 60px;
+}
+.txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+.img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    border-radius: 45%;
+    margin-left: 80px;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESTILO DOS CONHECIMENTOS*/
+
+section .conhecimentos{
+    padding: 40px 4%;
+}
+
+section .conhecimentos .flex{
+    gap: 60px;
+}
+
+.conhecimentos-box{
+    color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    border: 5px #fff;
+    margin-top: 45px;
+    transition: .2s;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.conhecimentos-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 08px #ffffff5a;
+}
+
+.conhecimentos-box i{
+    font-size: 60px;
+    color: #F76984;
+}
+
+.conhecimentos-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO PROJETO*/
+
+section .projetos{
+    padding: 10px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+.projetos .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+
+}
+ 
+
+.img-proj{
+    width: 460px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-proj:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+
+/* ESTILO DO RODAPÉ */
+
+footer{
+    padding: 10px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+    margin-bottom: 0;
+    min-height: 1vh;
+}
+
+.flex{
+    justify-content: space-between;
+
+}
+
+.line-footer{
+    padding: 5px 0;
+    border-top: 0;
+}
+
+.borda{
+   border-top: 3px solid #F76984; 
+}
+
+.line-footer p i{
+    color:#F76984;
+    font-size: 18px;
+}
+
+.line-footer p{
+    color: #fff;
+    font-size: 20px;
+}
+
+*{
+    scroll-behavior: smooth;
+
+}
+
+@media screen and (max-width: 1290px){
+    /* CLASSES GERAIS */
+    .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+    /* CABEÇALHO */
+    .menu-desktop, .aline-contato{
+        display: none;
+    }
+
+    /* TOPO DO SITE*/
+
+    section.topo-do-site .flex{
+        gap: 40px;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .txt-topo-site h1{
+        font-size: 30px;
+    }
+
+    .img-topo-site img{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /*ESTILO DOS CONHECIMENTOS*/
+
+    section .conhecimentos{
+        padding: 40px 8%;
+    }
+
+    /*PROJETOS*/
+    section .projetos{
+        padding: 10px 8%;
+        box-shadow: 0 0 40px 10px #ffffff1d;
+    }
+    
+    .img-proj{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .projetos .flex{
+        gap: 60px;
+    
+    }
+
+    /*RODAPÉ*/
+    .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .line-footer {
+        text-align: center;
+    }
+
+}
